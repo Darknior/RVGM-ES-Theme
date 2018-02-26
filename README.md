@@ -57,26 +57,26 @@ You can customise some options on this theme.
 - Change the **language** on the master *theme.xml* file by switching one variable.
 
 ```
-	<variables>
-		<langue>us</langue> 				<!-- fr / us 	${langue} 	Translate ES -->
-	</variables>
+  <variables>
+    <langue>us</langue>    <!-- fr / us    ${langue}    Translate ES -->
+  </variables>
 ```
 
 - Display or not the **help** information bar in the *game selection* screen, to have a biger *description size* and 2 more games display on the *game list*.
 
 ```
-	<include>./_art/nohelp.xml</include>		<!-- help / nohelp 	Bottom help bar on game selection screen -->
+    <include>./_art/nohelp.xml</include>    <!-- help / nohelp    Bottom help bar on game selection screen -->
 ```
 
 - Display the **Player number** and the game **Multiplayer style**. For this special RVGM feature i designed a special font to replace letters and numbers by better *icons* i've created for. You can use normal numbers and text by replacing the font like this :
 
 ```
-			<text name="md_players">
-				...
-				<fontPath>./_art/Players.ttf</fontPath> <!-- Replace by Roboto-Bold.ttf -->
-				<fontSize>0.09</fontSize>
-        ...
-			</text>
+  <text name="md_players">
+    ...
+    <fontPath>./_art/Players.ttf</fontPath>    <!-- Replace by Roboto-Bold.ttf -->
+    <fontSize>0.09</fontSize>
+    ...
+  </text>
 ```   
 But if you want to use them, you must respect these two rules.
 Only one number on the **players** tag. No *1-2* players and other text. Only :
