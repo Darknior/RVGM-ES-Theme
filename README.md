@@ -3,43 +3,96 @@
 
 ![RVGM Logo](_art/system-logo.png)
 
-RVGM is the new name of my old XVGM project i've started on 2014 on XBOX.
-- XVGM was a video theme for UnleashX, on the first Xbox, to launch Madmab and other emulators.
-The Xbox Video Game Museum was abandoned because i have so many memory problems/crash and the xbox is now too old ... with old gamepad, no HDMI, not enough power for some new systems like Nintendo DS, etc...
-http://www.emuxtras.net/forum/viewtopic.php?f=289&t=1293
 
-- RVGM : Retro/Retropie Video Game Museum, is the new project designed to work on Retropie, with EmulationStation on a PI.
-https://retropie.org.uk/forum/topic/16454/rvgm-retro-video-game-museum-skin-in-developpement
+- **XVGM** was an old project i've started in 2014 on the first XBOX. It was a video theme for **UnleashX** to launch Madmab and other emulators.
+The *Xbox Video Game Museum* was abandoned because i have so many memory problems/crash and the xbox is now too old ... with old gamepad, no HDMI support, no real 1080p support, not enough power for some new systems like Nintendo DS, and so on.
+Forum url : [EmuXtra](http://www.emuxtras.net/forum/viewtopic.php?f=289&t=1293)
 
-This theme is designed to show and write maximum of important informations about systems and games ...
-With a big MEDIA size to be show on a 1080p TV, or 720p because all is made with % and auto fit the screen.
-
-The theme is also MULTI LANG, you can switch US to FR with only a VARIABLE on the THEME.XML.
-If some people want to help with other language like ES, DE, IT, etc... i can share my PSD file.
+- **RVGM** : *Retro/Retropie Video Game Museum* is the new project name, designed to work on PI with Retropie that use EmulationStation. It use a recent ES version, minimum **2.7.4** to use theme *variable*, *video* support, *caroussel* support, *thumbnail* support and so on.
+The recent ES version also correct the old memory problems, now all is really better than on the old Xbox.
+Forum url : [Retropie](https://retropie.org.uk/forum/topic/16454/rvgm-retro-video-game-museum-skin-in-developpement)
 
 
 ## Getting Started
 
-Read these instructions to understand how to use this theme and help for development and testing purposes. See deployment for notes on how to deploy the project on your pi.
+This theme is designed to display most important information about systems and games, and support HD rendering up to 1080p.
+For each game it display a big **front cover** with 720 pixel height, a **video preview** in 640 x 480 pixel, a **game title** with 400 pixel width and all the most important **game text informations** possible. 
+The theme is build with percent size to auto fit your screen resolution. But it will be better if it use a 16/9 format.
+
+The theme is also **multi language**, and you can switch from US to FR with only a *variable* to modify on the *theme.xml*.
+I will also share the *description* and *informations* PSD files for people who want to help with other language like ES, DE, IT, and so on. We can add them to the main project.
 
 
 ### Prerequisites
 
-You must use it on a PI with the [Retropie](https://retropie.org.uk/) system.
+You must use it on a PI with the [Retropie](https://retropie.org.uk/) system installed on you MicroSD.
+
+You can find the **es_systems.cfg** used by EmulationStation to show *system list* here :
+
+```/opt/retropie/configs/all/emulationstation/es_systems.cfg```
+
+And you can find the **gamelist.xml** used to show *games informations* here :
+
+```/opt/retropie/configs/all/emulationstation/gamelists/ SYSTEM NAME / gamelist.xml```
+
+If you want to modifiy the systems order, or the games informations, you must modify these files on your PI.
 
 
 ### Installing
 
 - Download the theme [here](https://github.com/Darknior/RVGM/archive/master.zip)
 - Unpack it to your computer
-- Upload it to your pi by SSH with for exemple [WinSCP](https://sourceforge.net/projects/winscp/)
+- Upload it to your pi by SSH with for exemple [WinSCP](https://sourceforge.net/projects/winscp/) here :
 
-```
-/etc/emulationstation/themes/RVGM
-```
+```/etc/emulationstation/themes/RVGM```
 
 - Restart your EmulationStation
-- And choose it on the theme selection screen
+- And choose it on the theme selection menu
+
+
+### Customising
+
+You can customise some options on this theme.
+
+- Change the **language** on the master *theme.xml* file by switching one variable.
+
+```
+	<variables>
+		<langue>us</langue> 				<!-- fr / us 	${langue} 	Translate ES -->
+	</variables>
+```
+
+- Display or not the **help** information bar in the *game selection* screen, to have a biger *description size* and 2 more games display on the *game list*.
+
+```
+	<include>./_art/nohelp.xml</include>		<!-- help / nohelp 	Bottom help bar on game selection screen -->
+```
+
+- Display the **Player number** and the game **Multiplayer style**. For this special RVGM feature i designed a special font to replace letters and numbers by better *icons* i've created for. You can use normal numbers and text by replacing the font like this :
+
+```
+			<text name="md_players">
+				...
+				<fontPath>./_art/Players.ttf</fontPath> <!-- Replace by Roboto-Bold.ttf -->
+				<fontSize>0.09</fontSize>
+        ...
+			</text>
+```   
+But if you want to use them, you must respect these two rules.
+Only one number on the **players** tag. No *1-2* players and other text. Only :
+
+```
+<players>1</players>
+<players>2</players>
+<players>4</players>
+```
+And for the **multiplayer style**, 3 words are available: *Alt, Coop, Versus* with the Upercase first letter. You will see them when you will use the ES player filter option. On game selection screen letters *l t o p s* will be hide. First **upercase** letter will be replace by the icon and if you use **lowercase** letter i have also include an alternative logo for *Vs* and *Coop*.
+
+```
+<players>2 Alt</players>   <!-- Alternative player game, for scorring battle -->
+<players>2 Coop</players>  <!-- Real 2 player game in cooperative mode like Sonic 3 -->
+<players>5 Vs</players>    <!-- Versus game in battle mode, like Street Fighter 2 or here Bomberman -->
+```
 
 
 ## Built With
@@ -64,5 +117,5 @@ And now he include a theme editor that help me to release mine. To place my imag
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE.md](LICENSE) file for details
 
