@@ -13,7 +13,7 @@ The recent ES version also correct the old memory problems, now all is really be
 Forum url : [Retropie](https://retropie.org.uk/forum/topic/16454/rvgm-retro-video-game-museum-skin-in-developpement)
 
 
-## Getting Started
+## General informations
 
 This theme is designed to display most important information about systems and games, and support HD rendering up to 1080p.
 For each game it display a big **front cover** with 720 pixel height, a **video preview** in 640 x 480 pixel, a **game title** with 400 pixel width and all the most important **game text informations** possible. 
@@ -21,6 +21,15 @@ The theme is build with percent size to auto fit your screen resolution. But it 
 
 The theme is also **multi language**, and you can switch from US to FR with only a *variable* to modify on the *theme.xml*.
 I will also share the *description* and *informations* PSD files for people who want to help with other language like ES, DE, IT, and so on. We can add them to the main project.
+
+* **1080p** / *720p* native resolution
+* *Adaptive* percent object position
+* **Multi languages**
+* Separate *Background image*, big *Sprite*, *Logo*, machine *Photo* and information *text* for each system
+* Front *cover*, *logo*, **video** preview and information *text* support for each game
+* **Vectorial logo** for *player number* and multi-player *game style*
+
+![RVGM system screen](https://retropie.org.uk/forum/assets/uploads/files/1519069059766-cps-720-us-resized.jpg)
 
 
 ### Prerequisites
@@ -77,7 +86,10 @@ You can customise some options on this theme.
     <fontSize>0.09</fontSize>
     ...
   </text>
-```   
+```
+
+![RVGM Multiplayer style](https://retropie.org.uk/forum/assets/uploads/files/1519648544191-sans-titre-2.jpg)
+
 But if you want to use them, you must respect these two rules.
 Only one number on the **players** tag. No *1-2* players and other text. Only :
 
@@ -93,6 +105,7 @@ And for the **multiplayer style**, 3 words are available: *Alt, Coop, Versus* wi
 <players>2 Coop</players>  <!-- Real 2 player game in cooperative mode like Sonic 3 -->
 <players>5 Vs</players>    <!-- Versus game in battle mode, like Street Fighter 2 or here Bomberman -->
 ```
+![RVGM Multiplayer icons](https://retropie.org.uk/forum/assets/uploads/files/1519352342645-sans-titre-2.jpg)
 
 
 ## Built With
