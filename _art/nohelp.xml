@@ -1,0 +1,25 @@
+<!--
+
+File to configure helpbar or not on game select screen
+
+-->
+<theme>
+
+	<formatVersion>4</formatVersion>
+
+	<!-- VIEW VIDEO -->
+	<feature supported="video">
+		<view name="video">
+
+			<textlist name="gamelist">
+				<size>0.2214 0.6639</size>
+			</textlist>
+
+			<text name="md_description">
+				<size>0.4042 0.1681</size>
+			</text>
+
+		</view>
+	</feature>
+	
+</theme>
