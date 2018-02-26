@@ -10,7 +10,7 @@
 
 		<image name="bg-image" extra="true">
 			<path>./background.jpg</path>
-			<color>ffffffff</color>
+			<color>ffffffCC</color>
 			<tile>false</tile>
 		</image>
 		
@@ -27,6 +27,7 @@
 		<!-- Sytem AVATAR -->
 		<image name="avatar" extra="true">
 			<path>./avatar.png</path>
+			<rotation>90</rotation>
 		</image>
 		
 		<!-- Sytem DESCRIPTION -->
