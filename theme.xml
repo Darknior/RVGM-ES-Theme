@@ -24,9 +24,11 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 		<logoColor>bebebe</logoColor> 		<!-- Light gray ${logoColor} -->
 		<textColor>4c5058</textColor> 		<!-- Dark gray 	${textColor} -->
 		
-		<langue>fr</langue> 				<!-- fr / us 	${langue} -->
-	</variables> <!-- HIDE -->
+		<langue>fr</langue> 				<!-- fr / us 	${langue} 	Translate ES -->
+	</variables>
 	
+	<include>./_art/nohelp.xml</include>		<!-- help / nohelp 	Bottom help bar on game selection screen -->
+
 	<view name="system, basic, detailed, grid, video">
 
 		<!--hide standart helpsystem-->
@@ -87,13 +89,13 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<!-- Games number -->
 			<text name="systemInfo">
 				<origin>0 0</origin>
-				<pos>0.1214 0.8322</pos>
+				<pos>0.1214 0.832</pos>
 				<size>0.1365 0.0217</size>
 				<backgroundColor>00000000</backgroundColor>
 				<color>${textColor}</color>
 
 				<fontPath>./_art/Roboto-Bold.ttf</fontPath>
-				<fontSize>0.025</fontSize>
+				<fontSize>0.023</fontSize>
 				<alignment>left</alignment>
 				<zIndex>50</zIndex> <!-- Default -->
 			</text>
@@ -106,7 +108,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<size>1 1</size>
 				<path>./_art/bg-system-${langue}.png</path>
 				<!-- <path>./_art/zones-sys.jpg</path> -->
-				<zIndex>10</zIndex> <!-- Default 10 for extra -->
+				<zIndex>20</zIndex> <!-- Default 10 for extra -->
 			</image>
 			<image name="bg-image" extra="true">
 				<origin>0 0</origin>
@@ -143,8 +145,8 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<!-- Sytem AVATAR -->
 			<image name="avatar" extra="true">
 				<origin>0 0</origin> <!-- Left -->
-				<pos>0.3042 0.0491</pos>
-				<maxSize>0.2573 0.8676</maxSize>
+				<pos>0.268 0.0466</pos>
+				<maxSize>0.2969 0.9067</maxSize>
 				<default>./_art/empty.png</default>
 				<zIndex>15</zIndex>
 			</image>
@@ -186,7 +188,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<origin>0 0</origin>
 			<pos>0.0151 0.0445</pos>
 			<size>0.9698 0.911</size>
-			<color>ffffff33</color>
+			<color>ffffff1A</color>
 			<default>./_art/background.jpg</default>
 			<zIndex>5</zIndex> <!-- Default -->
 		</image>
@@ -195,8 +197,8 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<origin>0 0</origin>
 			<pos>0 0</pos>
 			<size>1 1</size>
-			<path>./_art/bg-game-${langue}.png</path>
-			<!-- <path>./_art/zones.jpg</path> -->
+			<!-- <path>./_art/bg-game-help-${langue}.png</path> IN HELP XML
+			<path>./_art/zones-game.jpg</path> -->
 			<zIndex>10</zIndex> <!-- Default 10 for extra -->
 		</image>
 
@@ -247,12 +249,12 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 
 			<textlist name="gamelist">
 				<origin>0 0</origin>
-				<pos>0.7432 0.252</pos> <!-- 0.258 -->
-				<size>0.2214 0.621</size>
+				<pos>0.7432 0.2632</pos> <!-- 0.258 -->
+				<!-- <size>0.2214 0.621</size> IN HELP XML -->
 
-				<fontPath>./_art/Roboto-Medium.ttf</fontPath>
-				<fontSize>0.025</fontSize>
-				<lineSpacing>1.7</lineSpacing> <!-- Default 1.5 -->
+				<fontPath>./_art/Roboto-Light.ttf</fontPath>
+				<fontSize>0.021</fontSize> <!-- Medium / 0.25 / 1.7 -->
+				<lineSpacing>1.5</lineSpacing> <!-- Default 1.5 -->
 				<alignment>right</alignment>
 				<horizontalMargin>0.0</horizontalMargin>
 
@@ -261,7 +263,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<selectorHeight>0.05</selectorHeight>
 				<selectedColor>${titleColor}</selectedColor> <!-- Select file color -->
 				<primaryColor>ffffff</primaryColor> <!-- File color -->
-				<secondaryColor>23232B</secondaryColor> <!-- Directory color -->
+				<secondaryColor>7BC4F1</secondaryColor> <!-- Directory color -->
 				<!--<forceUppercase>1</forceUppercase>-->
 				<zIndex>30</zIndex> <!-- Default -->
 			</textlist>
@@ -317,8 +319,8 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<video name="md_video">
 				<origin>0 0</origin>
 				<pos>0.3833 0.242</pos>
-				<size>0.3344 0.4452</size> <!-- NOT working with size for the moment --
-				<maxSize>0.3344 0.4452</maxSize> -->
+				<!-- <size>0.3344 0.4452</size> <!-- NOT working with size for the moment -->
+				<maxSize>0.3344 0.4452</maxSize>
 				
 				<!-- <default> PATH </default> -->
 				<showSnapshotNoVideo>true</showSnapshotNoVideo> <!-- Show thumbnail from gamelist.xml if no video and no default -->
@@ -329,36 +331,39 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			
 			<!-- METADATA --------------------------------------------------------------------------->
 			
-			<text name="md_developer, md_publisher, md_genre, md_players, md_playcount, md_lastplayed, md_description">
+			<text name="md_developer, md_publisher, md_genre, md_releasedate, md_playcount, md_lastplayed, md_description">
+				<origin>0 0</origin>
 				<fontPath>./_art/Roboto-Medium.ttf</fontPath>
 				<fontSize>0.025</fontSize>
 				<color>${textColor}</color>
 				<zIndex>40</zIndex> <!-- Default for METADATA -->
 			</text>		
 
-			<datetime name="md_releasedate">
-				<pos>0.4104 0.1062</pos>
-				<size>0.1005 0.0582</size> <!-- Width / Height -->
-				<fontPath>./_art/Roboto-Bold.ttf</fontPath>
-				<fontSize>0.033</fontSize>
-			</datetime>
+			<text name="md_players">
+				<pos>0.4031 0.0878</pos>
+				<size>0.1148 0.107</size> <!-- Width / Height -->
+				<fontPath>./_art/Players.ttf</fontPath> <!-- Roboto-Bold -->
+				<alignment>center</alignment>
+				<fontSize>0.085</fontSize>
+				<color>${textColor}</color>
+			</text>
 
 			<text name="md_developer">
 				<pos>0.088 0.7466</pos>
-				<size>0.2167 0.030</size>
+				<size>0.2167 0.03</size>
 			</text>
 			<text name="md_publisher">
-				<pos>0.0818 0.7763</pos>
-				<size>0.2224 0.03</size>
+				<pos>0.088 0.7763</pos>
+				<size>0.2167 0.03</size>
 			</text>
 			<text name="md_genre">
-				<pos>0.0609 0.8037</pos>
-				<size>0.2438 0.03</size>
+				<pos>0.088 0.8037</pos>
+				<size>0.2167 0.03</size>
 			</text>
-			<text name="md_players">
-				<pos>0.126 0.8345</pos>
-				<size>0.1781 0.03</size>
-			</text>
+			<datetime name="md_releasedate">
+				<pos>0.088 0.8345</pos>
+				<size>0.2167 0.03</size>
+			</datetime>
 			
 			<text name="md_playcount">
 				<pos>0.5073 0.71</pos>
@@ -371,7 +376,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			
 			<text name="md_description">
 				<pos>0.3135 0.7705</pos>
-				<size>0.4042 0.1279</size>
+				<!-- <size>0.4042 0.1279</size> IN HELP XML -->
 				<lineSpacing>1.0</lineSpacing>
 			</text>
 
