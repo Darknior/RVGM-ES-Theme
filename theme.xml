@@ -197,8 +197,8 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<origin>0 0</origin>
 			<pos>0 0</pos>
 			<size>1 1</size>
-			<!-- <path>./_art/bg-game-help-${langue}.png</path> IN HELP XML
-			<path>./_art/zones-game.jpg</path> -->
+			<path>./_art/bg-game-help-${langue}.png</path> IN HELP XML
+			<!-- <path>./_art/zones-game.jpg</path>
 			<zIndex>10</zIndex> <!-- Default 10 for extra -->
 		</image>
 
