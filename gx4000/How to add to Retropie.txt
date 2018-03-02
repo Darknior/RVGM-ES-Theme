@@ -1,0 +1,10 @@
+MESS
+https://github.com/retropie/retropie-setup/wiki/MESS
+Merged with MAME in version .162
+4 Mars 2016
+
+Using lr-mess :
+Amstrad GX4000 : 65% speed, some games still feel very playable, driver: gx4000
+
+How to install :
+https://balduin.wordpress.com/2016/05/06/mess-retropie/
