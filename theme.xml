@@ -189,7 +189,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<pos>0.0151 0.0445</pos>
 			<size>0.9698 0.911</size>
 			<color>ffffff1A</color>
-			<default>./_art/background.jpg</default>
+			<!-- <default></default>-->
 			<zIndex>5</zIndex> <!-- Default -->
 		</image>
 
@@ -197,7 +197,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<origin>0 0</origin>
 			<pos>0 0</pos>
 			<size>1 1</size>
-			<path>./_art/bg-game-help-${langue}.png</path> IN HELP XML
+			<path>./_art/bg-game-help-${langue}.png</path> <!-- IN HELP XML -->
 			<!-- <path>./_art/zones-game.jpg</path>
 			<zIndex>10</zIndex> <!-- Default 10 for extra -->
 		</image>
