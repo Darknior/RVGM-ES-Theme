@@ -31,6 +31,16 @@ I will also share the *description* and *informations* PSD files for people who 
 
 ![RVGM system screen](https://retropie.org.uk/forum/assets/uploads/files/1519069059766-cps-720-us-resized.jpg)
 
+## Not supported systems by Retropie (10/03/2018)
+
+- Apple 2e
+- Apple 2gs
+- Supervision, Watara
+- Creativision : Maybe trying with **lr-mess** driver **crvision, ** : 80-100% speed
+- Interton VC4000 : Maybe trying with **lr-mess** driver **scv**
+- Amstrad GX4000 : Maybe trying with **lr-mess** driver **gx4000** : **65%** speed, some games still feel very playable
+
+I include a readme file in these systems to explain how to use with **MESS**.
 
 ### Prerequisites
 
@@ -130,5 +140,5 @@ And now he include a theme editor that help me to release mine. To place my imag
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](LICENSE) file for details
 
