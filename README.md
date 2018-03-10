@@ -36,7 +36,7 @@ I will also share the *description* and *informations* PSD files for people who 
 - Apple 2e
 - Apple 2gs
 - Supervision, Watara
-- Creativision : Maybe trying with **lr-mess** driver **crvision, ** : 80-100% speed
+- Creativision : Maybe trying with **lr-mess** driver **crvision** : 80-100% speed
 - Interton VC4000 : Maybe trying with **lr-mess** driver **scv**
 - Amstrad GX4000 : Maybe trying with **lr-mess** driver **gx4000** : **65%** speed, some games still feel very playable
 
