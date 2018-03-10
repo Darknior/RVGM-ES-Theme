@@ -4,7 +4,7 @@ https://github.com/retropie/retropie-setup/wiki/MESS
 Merged with MAME in version .162
 
 Using lr-mess :
-CreatiVision : 80-100% speed, driver: crvision, not added to the script yet.
+Vc4000: ???% speed, driver: scv, not added to the script yet.
 
-How to install :
+How to install (scv) :
 https://balduin.wordpress.com/2016/05/06/mess-retropie/
