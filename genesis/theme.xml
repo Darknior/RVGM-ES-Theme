@@ -53,7 +53,7 @@
 		</image>
 
 		<image name="logo">
-			<path>./system-logo-gray.png</path>
+			<path>./system-logo-gray-${langue}.png</path>
 		</image>
 
 	</view>
