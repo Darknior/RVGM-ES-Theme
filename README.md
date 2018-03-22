@@ -34,11 +34,17 @@ I will also share the *description* and *informations* PSD files for people who 
 ## Not supported systems by Retropie (10/03/2018)
 
 - Apple 2e
+![RVGM Apple 2e](https://retropie.org.uk/forum/assets/uploads/files/1521063978162-apple2e.jpg)
 - Apple 2gs
+![RVGM Apple 2gs](https://retropie.org.uk/forum/assets/uploads/files/1521063993634-apple2gs.jpg)
 - Supervision, Watara
+![RVGM Supervision, Watara](https://retropie.org.uk/forum/assets/uploads/files/1521064024576-supervision.jpg)
 - Creativision : Maybe trying with **lr-mess** driver **crvision** : 80-100% speed
+![RVGM Creativision](https://retropie.org.uk/forum/assets/uploads/files/1521063998237-creativision.jpg)
 - Interton VC4000 : Maybe trying with **lr-mess** driver **scv**
+![RVGM Interton VC4000](https://retropie.org.uk/forum/assets/uploads/files/1521064038911-vc4000.jpg)
 - Amstrad GX4000 : Maybe trying with **lr-mess** driver **gx4000** : **65%** speed, some games still feel very playable
+![RVGM Amstrad GX4000](https://retropie.org.uk/forum/assets/uploads/files/1521064016743-gx4000.jpg)
 
 I include a readme file in these systems to explain how to use with **MESS**.
 
