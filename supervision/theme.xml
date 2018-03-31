@@ -5,7 +5,8 @@
 	<view name="system">
 
 		<image name="logo">
-			<path>./system-logo-gray.png</path>
+			<path>./system-logo-gray-${langue}.png</path>
+			<default>./system-logo-gray-fr.png</default>
 		</image>
 
 		<image name="bg-image" extra="true">
@@ -16,12 +17,8 @@
 		
 		<!-- Sytem LOGO -->
 		<image name="logo-color" extra="true">
-			<path>./system-logo.png</path>
-		</image>
-		
-		<!-- Sytem CONTROLLER -->
-		<image name="controller" extra="true">
-			<path>./controler-${langue}.png</path>
+			<path>./system-logo-${langue}.png</path>
+			<default>./system-logo-fr.png</default>
 		</image>
 		
 		<!-- Sytem AVATAR -->
@@ -32,16 +29,19 @@
 		<!-- Sytem DESCRIPTION -->
 		<image name="synopsys" extra="true">
 			<path>./description-${langue}.png</path>
+			<default>./description-us.png</default>
 		</image>
 		
 		<!-- Sytem INFO -->
 		<image name="info" extra="true">
 			<path>./info-${langue}.png</path>
+			<default>./info-us.png</default>
 		</image>
 		
 		<!-- Sytem CONSOLE -->
 		<image name="console" extra="true">
-			<path>./console.png</path>
+			<path>./console-${langue}.png</path>
+			<default>./console-fr.png</default>
 		</image>
 
 	</view>
@@ -53,7 +53,8 @@
 		</image>
 
 		<image name="logo">
-			<path>./system-logo-gray.png</path>
+			<path>./system-logo-gray-${langue}.png</path>
+			<default>./system-logo-gray-fr.png</default>
 		</image>
 
 	</view>
