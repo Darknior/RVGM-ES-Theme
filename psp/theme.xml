@@ -19,11 +19,6 @@
 			<path>./system-logo.png</path>
 		</image>
 		
-		<!-- Sytem CONTROLLER -->
-		<image name="controller" extra="true">
-			<path>./controler-${langue}.png</path>
-		</image>
-		
 		<!-- Sytem AVATAR -->
 		<image name="avatar" extra="true">
 			<path>./avatar.png</path>
@@ -32,11 +27,13 @@
 		<!-- Sytem DESCRIPTION -->
 		<image name="synopsys" extra="true">
 			<path>./description-${langue}.png</path>
+			<default>./description-us.png</default>
 		</image>
 		
 		<!-- Sytem INFO -->
 		<image name="info" extra="true">
 			<path>./info-${langue}.png</path>
+			<default>./info-us.png</default>
 		</image>
 		
 		<!-- Sytem CONSOLE -->

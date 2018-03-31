@@ -1,0 +1,58 @@
+<theme>
+	<formatVersion>4</formatVersion>
+	<include>./../theme.xml</include>
+
+	<view name="system">
+
+		<image name="logo">
+			<path>./system-logo-gray.png</path>
+		</image>
+
+		<image name="bg-image" extra="true">
+			<path>./background.jpg</path>
+			<color>ffffffff</color>
+			<tile>false</tile>
+		</image>
+		
+		<!-- Sytem LOGO -->
+		<image name="logo-color" extra="true">
+			<path>./system-logo.png</path>
+		</image>
+
+		<!-- Sytem AVATAR -->
+		<image name="avatar" extra="true">
+			<path>./avatar.png</path>
+		</image>
+		
+		<!-- Sytem DESCRIPTION -->
+		<image name="synopsys" extra="true">
+			<path>./description-${langue}.png</path>
+			<path>./description-us.png</path>
+		</image>
+		
+		<!-- Sytem INFO -->
+		<image name="info" extra="true">
+			<path>./info-${langue}.png</path>
+			<path>./info-us.png</path>
+		</image>
+		
+		<!-- Sytem CONSOLE -->
+		<image name="console" extra="true">
+			<path>./console.png</path>
+		</image>
+
+	</view>
+
+	<view name="basic, detailed, grid, video">
+
+		<image name="bg-image" extra="true">
+			<path>./background.jpg</path>
+		</image>
+
+		<image name="logo">
+			<path>./system-logo-gray.png</path>
+		</image>
+
+	</view>
+
+</theme>

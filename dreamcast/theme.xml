@@ -16,7 +16,7 @@
 		
 		<!-- Sytem LOGO -->
 		<image name="logo-color" extra="true">
-			<path>./system-logo.png</path>
+			<path>./system-logo-${langue}.png</path>
 		</image>
 		
 		<!-- Sytem CONTROLLER -->
@@ -41,7 +41,7 @@
 		
 		<!-- Sytem CONSOLE -->
 		<image name="console" extra="true">
-			<path>./console.png</path>
+			<path>./console-${langue}.png</path>
 		</image>
 
 	</view>
