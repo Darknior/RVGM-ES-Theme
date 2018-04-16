@@ -12,7 +12,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 
 	<formatVersion>4</formatVersion>
 
-	<!-- NOT WORKING FOR NOW !!!
+	<!-- 
 	System variable come from es_systems.cfg
 	Ex : <path>./art/logo/${system.theme}.svg</path>
 	${system.name} <name>nes</name>
@@ -24,7 +24,8 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 		<logoColor>bebebe</logoColor> 		<!-- Light gray ${logoColor} -->
 		<textColor>4c5058</textColor> 		<!-- Dark gray 	${textColor} -->
 		
-		<langue>fr</langue> 				<!-- fr / us 	${langue} 	Translate ES -->
+		<langue>fr</langue> 				<!-- Translate ES Help bars, Systems Info & Description, change Systems Logo & Console.
+											us : Englis (Default) / fr : French / sp : Spanish / jp : Japanese -->
 	</variables>
 	
 	<include>./_art/nohelp.xml</include>		<!-- help / nohelp 	Bottom help bar on game selection screen -->
@@ -43,16 +44,6 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<pos>2 2</pos>
         </text>		
 
-		<image name="background">
-			<origin>0 0</origin>
-			<pos>0 0</pos>
-			<size>1 1</size>
-			<path>./_art/white.png</path>
-			<color>${logoColor}</color>
-			<tile>true</tile> <!-- Repeat / Streach image -->
-			<zIndex>0</zIndex> <!-- Default -->
-		</image>
-		
 	</view>
 	
 	<!-- Carousel (Hide white bar and number of games -->
@@ -101,25 +92,36 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			</text>
 			
 			<!-- No background on System View EXTRA ----------------------- -->
-			 
+			
+			<image name="background" extra="true">
+				<origin>0 0</origin>
+				<pos>0 0</pos>
+				<size>1 1</size>
+				<path>./_art/white.png</path>
+				<color>${logoColor}</color>
+				<tile>true</tile> <!-- Repeat / Streach image -->
+				<zIndex>0</zIndex> <!-- Default -->
+			</image>
+			
+			<image name="bg-image" extra="true">
+				<origin>0 0</origin>
+				<pos>0.0151 0.0445</pos>
+				<size>0.9698 0.911</size>
+				<path>./${system.theme}/background.jpg</path>
+				<default>./_art/empty.png</default>
+				<color>ffffffff</color>
+				<tile>false</tile> <!-- Repeat / Streach image -->
+				<zIndex>5</zIndex> <!-- Default 10 for extra -->
+			</image>
+
 			<image name="bg-system" extra="true">
 				<origin>0 0</origin>
 				<pos>0 0</pos>
 				<size>1 1</size>
 				<path>./_art/bg-system-${langue}.png</path>
+				<default>./_art/bg-system-us.png</default>
 				<!-- <path>./_art/zones-sys.jpg</path> -->
 				<zIndex>20</zIndex> <!-- Default 10 for extra -->
-			</image>
-			<image name="bg-image" extra="true">
-				<origin>0 0</origin>
-				<pos>0.0151 0.0445</pos>
-				<size>0.9698 0.911</size>
-				
-				<default>./_art/white.png</default>
-				<color>${logoColor}</color>
-				<tile>true</tile> <!-- Repeat / Streach image -->
-
-				<zIndex>5</zIndex> <!-- Default 10 for extra -->
 			</image>
 			
 			<!-- SYSTEM informations EXTRA ------------------------------- -->
@@ -129,24 +131,26 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<origin>0 0.5</origin> <!-- W Left / H Center -->
 				<pos>0.026 0.1587</pos>
 				<maxSize>0.375 0.1849</maxSize>
+				<path>./${system.theme}/system-logo.png</path>
 				<default>./_art/system-logo.png</default>
 				<zIndex>15</zIndex>
 			</image>
 			
-			<!-- Sytem CONTROLLER -->
+			<!-- Sytem CONTROLLER --
 			<image name="controller" extra="true">
-				<origin>0.5 0.5</origin> <!-- center -->
+				<origin>0.5 0.5</origin>
 				<pos>0.5667 0.2397</pos>
 				<maxSize>0.313 0.3482</maxSize>
 				<default>./_art/empty.png</default>
 				<zIndex>20</zIndex>
-			</image>
+			</image> -->
 			
 			<!-- Sytem AVATAR -->
 			<image name="avatar" extra="true">
 				<origin>0 0</origin> <!-- Left -->
 				<pos>0.268 0.0466</pos>
 				<maxSize>0.2969 0.9067</maxSize>
+				<path>./${system.theme}/avatar.png</path>
 				<default>./_art/empty.png</default>
 				<zIndex>15</zIndex>
 			</image>
@@ -156,6 +160,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<origin>0 0</origin> <!-- Left -->
 				<pos>0.2911 0.6655</pos>
 				<size>0.4344 0.2374</size>
+				<path>./${system.theme}/description-us.png</path>
 				<default>./_art/empty.png</default>
 				<zIndex>20</zIndex>
 			</image>
@@ -165,6 +170,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<origin>0 0</origin> <!-- Left -->
 				<pos>0.0234 0.2648</pos>
 				<size>0.2469 0.6769</size>
+				<path>./${system.theme}/info-us.png</path>
 				<default>./_art/empty.png</default>
 				<zIndex>20</zIndex>
 			</image>
@@ -174,6 +180,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<origin>0.5 0.5</origin> <!-- center -->
 				<pos>0.1464 0.4909</pos>
 				<maxSize>0.2203 0.2591</maxSize>
+				<path>./${system.theme}/console.png</path>
 				<default>./_art/empty.png</default>
 				<zIndex>25</zIndex>
 			</image>
@@ -183,13 +190,48 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 	<!-- Carousel -->
 
 	<view name="basic, detailed, grid, video">
-			
+
+		<textlist name="gamelist">
+			<origin>0 0</origin>
+			<pos>0.7432 0.2632</pos> <!-- 0.258 -->
+			<!-- <size>0.2214 0.621</size> IN HELP XML -->
+
+			<selectedColor>${titleColor}</selectedColor> <!-- Select file color -->
+			<primaryColor>ffffff</primaryColor> <!-- File color -->
+			<secondaryColor>7BC4F1</secondaryColor> <!-- Directory color -->
+
+			<fontPath>./_art/Roboto-Light.ttf</fontPath>
+			<fontSize>0.021</fontSize> <!-- Medium / 0.25 / 1.7 -->
+			<lineSpacing>1.5</lineSpacing> <!-- Default 1.5 -->
+			<alignment>right</alignment>
+			<horizontalMargin>0.0</horizontalMargin>
+			<!--<forceUppercase>1</forceUppercase>-->
+
+			<selectorColor>ffffff00</selectorColor> <!-- Alpha channel RGBA: FF visible / 00 transparent -->
+			<!-- <selectorImagePath>./_art/icon.png</selectorImagePath> -->
+			<selectorHeight>0.05</selectorHeight>
+			<!-- <scrollSound>./_art/sounds/systemscroll.wav</scrollSound> -->
+			<zIndex>30</zIndex> <!-- Default -->
+		</textlist>
+		
+		<image name="background">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./_art/white.png</path>
+			<color>${logoColor}</color>
+			<tile>true</tile> <!-- Repeat / Streach image -->
+			<zIndex>0</zIndex> <!-- Default -->
+		</image>
+		
 		<image name="bg-image" extra="true">
 			<origin>0 0</origin>
 			<pos>0.0151 0.0445</pos>
 			<size>0.9698 0.911</size>
+			<path>./${system.theme}/background.jpg</path>
+			<default>./_art/empty.png</default>
 			<color>ffffff1A</color>
-			<!-- <default></default>-->
+			<tile>false</tile>
 			<zIndex>5</zIndex> <!-- Default -->
 		</image>
 
@@ -197,8 +239,9 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 			<origin>0 0</origin>
 			<pos>0 0</pos>
 			<size>1 1</size>
-			<path>./_art/bg-game-help-${langue}.png</path> <!-- IN HELP XML -->
-			<!-- <path>./_art/zones-game.jpg</path>
+			<!-- <path>./_art/bg-game-help-${langue}.png</path> <!-- IN HELP XML -->
+			<!-- <path>./_art/zones-game.jpg</path>  -->
+			<default>./_art/bg-game-help-us.png</default>
 			<zIndex>10</zIndex> <!-- Default 10 for extra -->
 		</image>
 
@@ -248,38 +291,28 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 		<view name="video">
 
 			<textlist name="gamelist">
-				<origin>0 0</origin>
 				<pos>0.7432 0.2632</pos> <!-- 0.258 -->
-				<!-- <size>0.2214 0.621</size> IN HELP XML -->
 
 				<fontPath>./_art/Roboto-Light.ttf</fontPath>
 				<fontSize>0.021</fontSize> <!-- Medium / 0.25 / 1.7 -->
 				<lineSpacing>1.5</lineSpacing> <!-- Default 1.5 -->
 				<alignment>right</alignment>
 				<horizontalMargin>0.0</horizontalMargin>
-
-				<selectorColor>ffffff00</selectorColor> <!-- Alpha channel RGBA: FF visible / 00 transparent -->
-				<!-- <selectorImagePath>./_art/icon.png</selectorImagePath> -->
-				<selectorHeight>0.05</selectorHeight>
-				<selectedColor>${titleColor}</selectedColor> <!-- Select file color -->
-				<primaryColor>ffffff</primaryColor> <!-- File color -->
-				<secondaryColor>7BC4F1</secondaryColor> <!-- Directory color -->
-				<!--<forceUppercase>1</forceUppercase>-->
-				<zIndex>30</zIndex> <!-- Default -->
 			</textlist>
 		
 			<!-- IMAGES --------------------------------------------------------------------------->
 			
-			<!-- Not used yet :
+			<!-- Used for some systems :
 			- rotation - type: FLOAT 
 			- rotationOrigin - type: NORMALIZED_PAIR
 			-->
 			
-			<image name="logo">
+			<image name="logo"> <!-- Sy<tem -->
 				<origin>0.5 0.5</origin> <!-- Center -->
 				<pos>0.8536 0.161</pos>
 				<maxSize>0.2214 0.1119</maxSize>
-				<!-- <path>./_art/logo.png</path> -->
+				<path>./${system.theme}/system-logo-gray.png</path>
+				<!-- <default>./_art/system-logo.png</default> NO default to use LogoText -->
 				<zIndex>50</zIndex> <!-- Default -->
 			</image>
 			<text name="logoText"> <!-- To show if no System LOGO -->
@@ -296,6 +329,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<origin>0 0</origin>
 				<pos>0.0255 0.0639</pos> <!-- Left align -->
 				<maxSize>0.3766 0.6689</maxSize>
+				<default>./_art/empty.png</default>
 				<zIndex>30</zIndex> <!-- Default -->
 			</image>
 			
@@ -303,6 +337,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<origin>0.5 0.5</origin> <!-- Center -->
 				<pos>0.6214 0.1393</pos>
 				<maxSize>0.2031 0.1495</maxSize>
+				<default>./_art/empty.png</default>
 				<zIndex>35</zIndex> <!-- Default -->
 			</image>
 			
@@ -322,7 +357,7 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 				<!-- <size>0.3344 0.4452</size> <!-- NOT working with size for the moment -->
 				<maxSize>0.3344 0.4452</maxSize>
 				
-				<!-- <default> PATH </default> -->
+				<!-- <default> PATH in MEDIA </default> Not used to show Screenshot -->
 				<showSnapshotNoVideo>true</showSnapshotNoVideo> <!-- Show thumbnail from gamelist.xml if no video and no default -->
 				<showSnapshotDelay>false</showSnapshotDelay>
 				<delay>0.1</delay> <!-- Second -->
@@ -393,21 +428,21 @@ Doc:			https://github.com/RetroPie/EmulationStation/blob/master/THEMES.md
 		</view>
 	</feature>
 
-<!--
+<!-- BRUITAGES du MENU --
     <sound name="systemscroll">
-			<path>./sounds/scroll.wav</path>
+			<path>./_art/sounds/systemscroll.wav</path>
 	</sound>
 	<sound name="systemselect">
-			<path>./sounds/scroll.wav</path>
+			<path>./_art/sounds/systemselect.wav</path>
 	</sound>
 	<sound name="back">
-			<path>./sounds/scroll.wav</path>
+			<path>./_art/sounds/back.wav</path>
 	</sound>
 	<sound name="launch">
-			<path>./sounds/launch.wav</path>
+			<path>./_art/sounds/launch.wav</path>
 	</sound>
 	<sound name="menuopen">
-			<path>./sounds/lauch.wav</path>
+			<path>./_art/sounds/menuopen.wav</path>
 	</sound>
 -->
 
