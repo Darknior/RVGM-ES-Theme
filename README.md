@@ -1,3 +1,5 @@
+# Project discontinued! Now use : https://github.com/Darknior/RVGM-BT-Theme
+
 # RVGM : Retro/Retropie Video Game Museum
 
 
